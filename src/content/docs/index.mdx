@@ -1,0 +1,25 @@
+---
+title: Welcome to My Documentation
+description: This website houses all documentation for all products or projects related to Excalian
+template: splash
+hero:
+  tagline: This website houses all documentation for all products or projects related to Excalian
+  image:
+    file: ../../../public/large_logo.png
+  actions:
+    - text: View Docs
+      link: /guides/example/
+      icon: right-arrow
+      variant: primary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="Main Website" icon="external">
+		My main website is located at [www.excalian.com](https://www.excalian.com).
+	</Card>
+	<Card title="Extra Links" icon="information">
+		For any extra social links, just look at the top right of this page.
+	</Card>
+</CardGrid>
