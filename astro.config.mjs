@@ -9,6 +9,7 @@ export default defineConfig({
 	integrations: [
     	starlight({
 			title: "Excalian's Documentation",
+			pagefind: false,
 			description: "All documentation for all products or projects related to Excalian",
 			logo: { src: './public/logo.png' },
 			sidebar: [
@@ -33,9 +34,9 @@ export default defineConfig({
 				threads: 'https://www.excalian.com/threads',
 				discord: 'https://www.excalian.com/discord',
 			},
-      customCss: [ './src/tailwind.css' ],
-      lastUpdated: false,
-	  favicon: './favicon.ico',
+			customCss: [ './src/tailwind.css' ],
+			lastUpdated: false,
+			favicon: './favicon.ico',
 		}),
     tailwind({
       applyBaseStyles: false,
