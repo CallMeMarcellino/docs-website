@@ -29,7 +29,7 @@ export default defineConfig({
 				github: 'https://www.excalian.com/github',
 				youtube: 'https://www.excalian.com/youtube',
 				twitch: 'https://www.excalian.com/twitch',
-				'x.com': 'https://www.excalian.com/x',
+				'x.com': 'https://www.excalian.com/twitter',
 				threads: 'https://www.excalian.com/threads',
 				discord: 'https://www.excalian.com/discord',
 			},
