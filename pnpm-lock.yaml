@@ -23,6 +23,9 @@ dependencies:
   sharp:
     specifier: ^0.32.5
     version: 0.32.6
+  starlight-blog:
+    specifier: ^0.7.0
+    version: 0.7.0(@astrojs/starlight@0.22.1)(astro@4.7.1)
   tailwindcss:
     specifier: ^3.4.3
     version: 3.4.3
@@ -1484,6 +1487,17 @@ packages:
       rehype-expressive-code: 0.35.3
     dev: false
 
+  /astro-remote@0.3.2:
+    resolution: {integrity: sha512-Xwm6Y+ldQEnDB2l1WwVqeUs3QvUX8LtJWnovpXlf8xhpicPu159jXOhDbHZS9wilGO/+/nR67A1qskF8pDvdGQ==}
+    engines: {node: '>=18.14.1'}
+    dependencies:
+      entities: 4.5.0
+      marked: 12.0.2
+      marked-footnote: 1.2.2(marked@12.0.2)
+      marked-smartypants: 1.1.6(marked@12.0.2)
+      ultrahtml: 1.5.3
+    dev: false
+
   /astro@4.7.1(typescript@5.4.5):
     resolution: {integrity: sha512-3o+VmnIPBiCm0QVyyTC/F8humNXny5YpI+MKvBTksviRtKxhnztEA3+GAR2XWLUSOx1+/GVjz7mExq3hJGOeqQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
@@ -2837,6 +2851,29 @@ packages:
 
   /markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
+    dev: false
+
+  /marked-footnote@1.2.2(marked@12.0.2):
+    resolution: {integrity: sha512-TFBEHwHLSSedub7P6XHHs+dMMOnDeNV5+kFDo4trU//gDd8iM57lg9jr9NGwDifPwLllHwKmFcRNp5uYvO2Fnw==}
+    peerDependencies:
+      marked: '>=7.0.0'
+    dependencies:
+      marked: 12.0.2
+    dev: false
+
+  /marked-smartypants@1.1.6(marked@12.0.2):
+    resolution: {integrity: sha512-38rdxcV3+EHrvoHioSrgBDvOmFb+TNcszZggrl15qe4MEfQxBArfSgsGgFP0YqHlGy8Rgoyi4gN4ThBWzwNJeA==}
+    peerDependencies:
+      marked: '>=4 <13'
+    dependencies:
+      marked: 12.0.2
+      smartypants: 0.2.2
+    dev: false
+
+  /marked@12.0.2:
+    resolution: {integrity: sha512-qXUm7e/YKFoqFPYPa3Ukg9xlI5cyAtGmyEIzMfW//m6kXwCy2Ps9DYf5ioijFKQ8qyuscrHoY04iJGctu2Kg0Q==}
+    engines: {node: '>= 18'}
+    hasBin: true
     dev: false
 
   /mdast-util-definitions@6.0.0:
@@ -4250,6 +4287,11 @@ packages:
       sax: 1.3.0
     dev: false
 
+  /smartypants@0.2.2:
+    resolution: {integrity: sha512-TzobUYoEft/xBtb2voRPryAUIvYguG0V7Tt3de79I1WfXgCwelqVsGuZSnu3GFGRZhXR90AeEYIM+icuB/S06Q==}
+    hasBin: true
+    dev: false
+
   /source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
@@ -4266,6 +4308,19 @@ packages:
 
   /sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+    dev: false
+
+  /starlight-blog@0.7.0(@astrojs/starlight@0.22.1)(astro@4.7.1):
+    resolution: {integrity: sha512-QmCutR3qw1Nl7TFxbZ7Z17dczF1GpYI94Dy9S1OfZUFh3ThujFVVWzub6cwUnunow/NGVf2gwI/SUwC3OrVhfQ==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.22.1'
+      astro: '>=4.2.7'
+    dependencies:
+      '@astrojs/starlight': 0.22.1(astro@4.7.1)
+      astro: 4.7.1(typescript@5.4.5)
+      astro-remote: 0.3.2
+      github-slugger: 2.0.0
     dev: false
 
   /stdin-discarder@0.2.2:
@@ -4548,6 +4603,10 @@ packages:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
+    dev: false
+
+  /ultrahtml@1.5.3:
+    resolution: {integrity: sha512-GykOvZwgDWZlTQMtp5jrD4BVL+gNn2NVlVafjcFUJ7taY20tqYdwdoWBFy6GBJsNTZe1GkGPkSl5knQAjtgceg==}
     dev: false
 
   /unherit@3.0.1:

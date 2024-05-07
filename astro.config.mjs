@@ -1,45 +1,53 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightBlog from 'starlight-blog';
 
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://docs.excalian.com',
-	integrations: [
-    	starlight({
-			title: "Excalian's Documentation",
-			pagefind: false,
-			description: "All documentation for all products or projects related to Excalian",
-			logo: { src: './public/logo.png' },
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						{label: 'Example', link: '/guides/example'},
-					],
-				},
-				{
-					label: 'Reference',
-					items: [
-						{label: 'Example', link: '/reference/example'},
-					],
-				},
-			],
-			social: {
-				github: 'https://www.excalian.com/github',
-				youtube: 'https://www.excalian.com/youtube',
-				twitch: 'https://www.excalian.com/twitch',
-				'x.com': 'https://www.excalian.com/twitter',
-				threads: 'https://www.excalian.com/threads',
-				discord: 'https://www.excalian.com/discord',
-			},
-			customCss: [ './src/tailwind.css' ],
-			lastUpdated: false,
-			favicon: './favicon.ico',
-		}),
+  site: "https://docs.excalian.com",
+  integrations: [
+    starlight({
+      title: "Excalian's Documentation",
+      pagefind: false,
+      description: "All documentation for all products or projects related to Excalian",
+      logo: {src: './src/assets/logo.png'},
+      sidebar: [
+        {
+          label: 'Guides',
+          items: [
+            {label: 'Example', link: '/guides/example'},
+          ],
+        },
+        {
+          label: 'Reference',
+          items: [
+            {label: 'Example', link: '/reference/example'},
+          ],
+        },
+        {label: 'Homepage', link: 'https://www.excalian.com', badge: {text: 'Redirect', variant: 'tip'}},
+      ],
+      customCss: ['./src/tailwind.css'],
+      favicon: './favicon.ico',
+      plugins: [
+        starlightBlog({
+          title: "Changelog",
+          authors: {
+            excalian: {
+              name: "Marcellino Abdelmalak",
+              title: "Full-Time Student",
+              picture: './src/assets/large_logo.png',
+              url: "https://www.excalian.com/"
+            },
+          },
+          prevNextLinksOrder: 'chronological',
+          prefix: 'changelog',
+        })
+      ]
+    }),
     tailwind({
-      applyBaseStyles: false,
+	    applyBaseStyles: false,
     }),
   ],
 });
