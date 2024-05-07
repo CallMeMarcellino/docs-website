@@ -37,7 +37,7 @@ export default defineConfig({
             excalian: {
               name: "Marcellino Abdelmalak",
               title: "Full-Time Student",
-              picture: './src/assets/large_logo.png',
+              picture: 'src/assets/large_logo.png',
               url: "https://www.excalian.com/"
             },
           },
